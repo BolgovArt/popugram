@@ -1,0 +1,1 @@
+ C:\\Users\\Tars\\Desktop\\surf\\surf-flutter-summer-school-24\\.dart_tool\\flutter_build\\be57396578c0d21f4b1c80ba5c0e2220\\native_assets.yaml: 
