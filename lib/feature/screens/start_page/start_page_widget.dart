@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:surf_flutter_summer_school_24/feature/screens/start_page/start_page_model.dart';
 import 'package:surf_flutter_summer_school_24/feature/theme/di/theme_inherited.dart';
 import 'package:surf_flutter_summer_school_24/feature/screens/opened_image/photo_page_widget.dart';
+import 'package:surf_flutter_summer_school_24/generated/locale_keys.g.dart';
 import 'package:surf_flutter_summer_school_24/uikit/styles/font_styles.dart';
 
 
@@ -68,7 +70,7 @@ class StartPageWidget extends StatelessWidget {
             return Center(child: Text('Error: ${snapshot.error}'));
           } else {
             return model == null || model.photos.isEmpty
-                ? Center(child: Text('No photos available'))
+                ? Center(child: Text(LocaleKeys.No_photos_available.tr()))
                 : 
                 GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -157,6 +159,28 @@ class BottomSheetContent extends StatelessWidget {
                   Text('Тема', style: MyCustomStyle.mainText.copyWith(fontSize: 18),),
                   const Expanded(child: SizedBox()),
                   Text('$currentTheme', style: MyCustomStyle.mainTextThin.copyWith(fontSize: 18),)
+                ],
+              ),
+            ),
+              
+            ),
+            SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {
+                if (context.locale == Locale('ru')) {
+                  context.setLocale(Locale('en'));
+                } else {
+                context.setLocale(Locale('ru'));
+                }
+                }, 
+              child: Row(
+                children: [
+                  const Icon(Icons.language),
+                  const SizedBox(width: 10),
+                  Text('Язык', style: MyCustomStyle.mainText.copyWith(fontSize: 18),),
+                  const Expanded(child: SizedBox()),
+                  Text('Какой?', style: MyCustomStyle.mainTextThin.copyWith(fontSize: 18),)
                 ],
               ),
             ),

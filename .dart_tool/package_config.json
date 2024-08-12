@@ -152,6 +152,18 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "easy_localization",
+      "rootUri": "file:///C:/Users/bolgo/AppData/Local/Pub/Cache/hosted/pub.dev/easy_localization-3.0.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "easy_logger",
+      "rootUri": "file:///C:/Users/bolgo/AppData/Local/Pub/Cache/hosted/pub.dev/easy_logger-0.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "equatable",
       "rootUri": "file:///C:/Users/bolgo/AppData/Local/Pub/Cache/hosted/pub.dev/equatable-2.0.5",
       "packageUri": "lib/",
@@ -216,6 +228,12 @@
       "rootUri": "file:///C:/Users/bolgo/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-3.0.2",
       "packageUri": "lib/",
       "languageVersion": "3.1"
+    },
+    {
+      "name": "flutter_localizations",
+      "rootUri": "file:///C:/src/flutter/packages/flutter_localizations",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
     },
     {
       "name": "flutter_plugin_android_lifecycle",
@@ -318,6 +336,12 @@
       "rootUri": "file:///C:/Users/bolgo/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_windows-0.2.1+1",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///C:/Users/bolgo/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.19.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "io",
@@ -644,7 +668,7 @@
       "languageVersion": "3.4"
     }
   ],
-  "generated": "2024-08-12T11:32:06.397916Z",
+  "generated": "2024-08-12T16:05:16.335283Z",
   "generator": "pub",
   "generatorVersion": "3.5.0-180.0.dev",
   "flutterRoot": "file:///C:/src/flutter",

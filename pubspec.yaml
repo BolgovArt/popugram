@@ -16,6 +16,7 @@ dependencies:
   http: ^1.2.2
   image_picker: ^1.1.2
   json_annotation: ^4.9.0
+  easy_localization: ^3.0.7
 
 dev_dependencies:
   flutter_test:
@@ -29,6 +30,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/
+    - assets/translations/
   uses-material-design: true
 
 
