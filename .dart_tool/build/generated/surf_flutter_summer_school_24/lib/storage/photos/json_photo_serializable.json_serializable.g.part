@@ -16,6 +16,7 @@ Map<String, dynamic> _$ResponseListToJson(ResponseList instance) =>
 ResponseElements _$ResponseElementsFromJson(Map<String, dynamic> json) =>
     ResponseElements(
       path: json['path'] as String,
+      file: json['file'] as String,
       sizes: (json['sizes'] as List<dynamic>)
           .map((e) => ResponseSize.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -24,6 +25,7 @@ ResponseElements _$ResponseElementsFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$ResponseElementsToJson(ResponseElements instance) =>
     <String, dynamic>{
       'path': instance.path,
+      'file': instance.file,
       'sizes': instance.sizes,
     };
 

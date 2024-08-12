@@ -19,6 +19,7 @@ class ResponseElements {
   // final String resource_id;
   // // final String? public_url;
   final String path;
+  final String file;
   // final String? date_time;
   final List<ResponseSize> sizes;
 
@@ -27,6 +28,7 @@ class ResponseElements {
     // required this.resource_id, 
     // // required this.public_url,
     required this.path,
+    required this.file,
     // required this.date_time,
     required this.sizes,
     });

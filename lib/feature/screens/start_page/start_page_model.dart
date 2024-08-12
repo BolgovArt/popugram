@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:surf_flutter_summer_school_24/storage/photos/get_photo_http.dart';
-import 'package:surf_flutter_summer_school_24/storage/photos/json_photo_serializable.dart';
 
 class StartPageModel extends ChangeNotifier {
   final apiClient = ApiClient();
   final _photos = <Image>[];
   List<Image> get photos => _photos;
   
-  Future<void> createPosts() async {
-    final photosFrom = await apiClient.getPhotosUsingHttp();
+  Future<List<Image>> createPosts() async {
+    final List<String> photosFrom = await apiClient.getPhotosUsingHttp();
     // _photos += photos;
     // _photos += 
     for (var index in photosFrom) {
       _photos.add(Image.network(index, fit: BoxFit.cover));
     }
-    
+    // print(photosFrom);
     notifyListeners();
+    return _photos;
+    
   }
 
   int get photosCount => _photos.length;
@@ -31,13 +32,6 @@ class StartPageModel extends ChangeNotifier {
 
 class StartPageModelProvider extends InheritedNotifier {
   final StartPageModel model;
-
-  // StartPageModelProvider({ //! todo чем отличается форма записи конструктора разобрать
-  //   super.key, 
-  //   super.notifier, 
-  //   required super.child, 
-  //   required this.model
-  //   });
 
   const StartPageModelProvider({
   Key? key,

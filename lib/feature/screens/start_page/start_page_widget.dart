@@ -2,12 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:surf_flutter_summer_school_24/feature/screens/start_page/start_page_model.dart';
 import 'package:surf_flutter_summer_school_24/feature/theme/di/theme_inherited.dart';
 import 'package:surf_flutter_summer_school_24/feature/screens/opened_image/photo_page_widget.dart';
-import 'package:surf_flutter_summer_school_24/storage/images/images.dart';
-import 'package:surf_flutter_summer_school_24/storage/photos/get_photo_http.dart';
 import 'package:surf_flutter_summer_school_24/uikit/styles/font_styles.dart';
-
-// import 'package:http/http.dart' as http;
-// import 'dart:io';
 
 
 class WidgetForSaveModelFromInheritProvider extends StatefulWidget {
@@ -28,7 +23,6 @@ class _WidgetForSaveModelFromInheritProviderState extends State<WidgetForSaveMod
   }
 }
 
-
 class StartPageWidget extends StatelessWidget {
   const StartPageWidget({super.key});
 
@@ -38,8 +32,6 @@ class StartPageWidget extends StatelessWidget {
     final modelProvider = StartPageModelProvider.watch(context);
     final model = modelProvider?.model;
 
-    // ApiClient.getPhotosUsingHttp();
-    // getPhotosUsingHttp();
     return Scaffold(
       appBar: AppBar(
       automaticallyImplyLeading: false,
@@ -65,6 +57,8 @@ class StartPageWidget extends StatelessWidget {
           ))
       ],
       ),
+
+
       body: FutureBuilder(
         future: model?.createPosts(),
         builder: (context, snapshot) {
@@ -75,7 +69,8 @@ class StartPageWidget extends StatelessWidget {
           } else {
             return model == null || model.photos.isEmpty
                 ? Center(child: Text('No photos available'))
-                : GridView.builder(
+                : 
+                GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3,
           ),
@@ -219,37 +214,3 @@ class BottomSheetContent extends StatelessWidget {
   }
 }
 
-
-// class PhotoHero extends StatelessWidget {
-
-//   final Image photo;
-//   final int index;
-//   final VoidCallback? onTap;
-
-//   const PhotoHero({
-//     super.key, 
-//     required this.photo, 
-//     required this.index,
-//     this.onTap, 
-//     });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Hero(
-//         tag: photo,
-//         // child: PhotoPage(index: index),
-//         child: PhotoPage(index: index),
-//       );
-//   }
-// }
-
-
-
-// class PhotoHero extends StatelessWidget {
-//   const PhotoHero({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Placeholder();
-//   }
-// }

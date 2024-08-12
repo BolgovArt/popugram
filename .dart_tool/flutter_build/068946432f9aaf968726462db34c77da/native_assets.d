@@ -1,0 +1,1 @@
+ C:\\src\\Flutter_projects\\popugram\\.dart_tool\\flutter_build\\068946432f9aaf968726462db34c77da\\native_assets.yaml: 

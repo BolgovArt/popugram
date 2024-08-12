@@ -1,22 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:surf_flutter_summer_school_24/storage/photos/get_photo_http.dart';
-
-// class ImagesFromServer {
-// final apiClient = ApiClient();
-// final images = [];
-
-// List<dynamic> gfsad () {
-//   final imagesFromServer = apiClient.getPhotosUsingHttp() as Iterable<String>;
-
-//   for (var index in imagesFromServer) {
-//   Image.network(index);
-//   }
-
-// return images;
-// }
-
-// }
 
 List<AssetImage> images2page = [
   const AssetImage('assets/images/1.jpg'),
