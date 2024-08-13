@@ -15,10 +15,22 @@ class CodegenLoader extends AssetLoader{
   }
 
   static const Map<String,dynamic> en = {
-  "No_photos_available": "No photos available"
+  "No_photos_available": "No photos available",
+  "light": "Light",
+  "dark": "Dark",
+  "theme": "Theme",
+  "language": "Language",
+  "current_language": "English",
+  "upload_photo": "Upload Photo"
 };
 static const Map<String,dynamic> ru = {
-  "No_photos_available": "Фотографии недоступны"
+  "No_photos_available": "Фотографии недоступны",
+  "light": "Светлая",
+  "dark": "Темная",
+  "theme": "Тема",
+  "language": "Язык",
+  "current_language": "Русский",
+  "upload_photo": "Загрузить фото"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "ru": ru};
 }
